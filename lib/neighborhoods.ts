@@ -1,0 +1,88 @@
+import type { Neighborhood } from '@/types';
+
+export const NEIGHBORHOODS: Neighborhood[] = [
+  {
+    slug: 'tucson',
+    name: 'Tucson',
+    nameEs: 'Tucson',
+    description: 'The heart of Southern Arizona. Diverse neighborhoods, vibrant culture, University of Arizona, and year-round sunshine.',
+    descriptionEs: 'El corazón del sur de Arizona. Vecindarios diversos, cultura vibrante, la Universidad de Arizona y sol todo el año.',
+    highlights: ['University District', 'Fourth Avenue', 'Barrio Viejo', 'Sam Hughes', 'Midtown'],
+    highlightsEs: ['Distrito Universitario', 'Fourth Avenue', 'Barrio Viejo', 'Sam Hughes', 'Midtown'],
+    cinc_url: 'https://ninaflores.viewalltucsonhomes.com/search/quick/PDQVLZZZW5WWR1PTY/homes-for-sale-in-tucson',
+  },
+  {
+    slug: 'vail',
+    name: 'Vail',
+    nameEs: 'Vail',
+    description: 'A rapidly growing community southeast of Tucson. Top-rated schools, new construction, and a family-friendly atmosphere.',
+    descriptionEs: 'Una comunidad en rápido crecimiento al sureste de Tucson. Escuelas de primera, nuevas construcciones y ambiente familiar.',
+    highlights: ['Rincon Valley', 'Top-rated TUSD schools', 'New construction communities', 'Close to I-10'],
+    highlightsEs: ['Rincon Valley', 'Escuelas de alta calificación', 'Comunidades de nueva construcción', 'Cerca de la I-10'],
+    cinc_url: 'https://ninaflores.viewalltucsonhomes.com/search/quick/PDQVLZZZ4QV2N8ZZB/homes-for-sale-in-vail',
+  },
+  {
+    slug: 'oro-valley',
+    name: 'Oro Valley',
+    nameEs: 'Oro Valley',
+    description: 'An upscale suburb north of Tucson with stunning mountain views, golf courses, and one of Arizona\'s safest communities.',
+    descriptionEs: 'Un suburbio exclusivo al norte de Tucson con impresionantes vistas a la montaña, campos de golf y una de las comunidades más seguras de Arizona.',
+    highlights: ['Catalina Mountains views', 'Golf communities', 'Steam Pump Ranch', 'Excellent schools'],
+    highlightsEs: ['Vistas a las Catalinas', 'Comunidades de golf', 'Steam Pump Ranch', 'Excelentes escuelas'],
+    cinc_url: 'https://ninaflores.viewalltucsonhomes.com/search/quick/PDQVLZZZ304T9L7W2/homes-for-sale-in-oro-valley',
+  },
+  {
+    slug: 'green-valley',
+    name: 'Green Valley',
+    nameEs: 'Green Valley',
+    description: 'A premier retirement destination south of Tucson. Peaceful desert living with active adult communities and world-class golf.',
+    descriptionEs: 'Un destino de retiro premier al sur de Tucson. Vida tranquila en el desierto con comunidades para adultos activos y golf de clase mundial.',
+    highlights: ['Active adult communities', 'Golf courses', 'Santa Cruz River Park', 'Close to Mexico border'],
+    highlightsEs: ['Comunidades para adultos activos', 'Campos de golf', 'Parque del Río Santa Cruz', 'Cerca de la frontera con México'],
+    cinc_url: 'https://ninaflores.viewalltucsonhomes.com/search/quick/PDQVLZZZTXCYXTKBR/homes-for-sale-in-green-valley',
+  },
+  {
+    slug: 'marana',
+    name: 'Marana',
+    nameEs: 'Marana',
+    description: 'A booming northwest corridor with master-planned communities, strong job growth, and some of Tucson\'s newest homes.',
+    descriptionEs: 'Un corredor noroeste en auge con comunidades planificadas, fuerte crecimiento de empleo y algunas de las casas más nuevas de Tucson.',
+    highlights: ['Dove Mountain', 'Gladden Farms', 'Tangerine Road corridor', 'New construction'],
+    highlightsEs: ['Dove Mountain', 'Gladden Farms', 'Corredor Tangerine', 'Nueva construcción'],
+    cinc_url: 'https://ninaflores.viewalltucsonhomes.com/search/quick/PDQVLZZZT1Y9NLNJ9/homes-for-sale-in-marana',
+  },
+  {
+    slug: 'sahuarita',
+    name: 'Sahuarita',
+    nameEs: 'Sahuarita',
+    description: 'A fast-growing town south of Tucson with affordable prices, master-planned Green Valley Farms, and easy interstate access.',
+    descriptionEs: 'Una ciudad de rápido crecimiento al sur de Tucson con precios accesibles, el planificado Green Valley Farms y fácil acceso a la autopista.',
+    highlights: ['Green Valley Farms', 'Rancho Sahuarita', 'Sahuarita Lake', 'New home communities'],
+    highlightsEs: ['Green Valley Farms', 'Rancho Sahuarita', 'Lago Sahuarita', 'Comunidades de nuevas casas'],
+    cinc_url: 'https://ninaflores.viewalltucsonhomes.com/search/quick/PDQVLZZZT13MK95SY/homes-for-sale-in-sahuarita',
+  },
+  {
+    slug: 'catalina-foothills',
+    name: 'Catalina Foothills',
+    nameEs: 'Catalina Foothills',
+    description: 'Tucson\'s premier luxury enclave. Custom estates, resort-style amenities, and panoramic views of the Santa Catalina Mountains.',
+    descriptionEs: 'El enclave de lujo exclusivo de Tucson. Residencias personalizadas, comodidades tipo resort y vistas panorámicas de las montañas Santa Catalina.',
+    highlights: ['La Encantada shopping', 'Sabino Canyon', 'Custom luxury estates', 'Top-rated schools'],
+    highlightsEs: ['Compras en La Encantada', 'Cañón Sabino', 'Residencias de lujo personalizadas', 'Escuelas de alta calificación'],
+    cinc_url: 'https://ninaflores.viewalltucsonhomes.com/search',
+  },
+  {
+    slug: 'south-tucson',
+    name: 'South Tucson',
+    nameEs: 'South Tucson',
+    description: 'A culturally rich community with deep roots, affordable housing options, and some of Tucson\'s best authentic Mexican food.',
+    descriptionEs: 'Una comunidad culturalmente rica con raíces profundas, opciones de vivienda asequible y la mejor comida mexicana auténtica de Tucson.',
+    highlights: ['South 12th Avenue', 'Affordable entry-level homes', 'Rich Mexican-American heritage', 'Close to downtown'],
+    highlightsEs: ['Avenida 12 Sur', 'Casas de entrada asequibles', 'Rica herencia mexicano-americana', 'Cerca del centro'],
+    cinc_url: 'https://ninaflores.viewalltucsonhomes.com/search',
+  },
+];
+
+export function getNeighborhood(slug: string): Neighborhood | undefined {
+  return NEIGHBORHOODS.find(n => n.slug === slug);
+}

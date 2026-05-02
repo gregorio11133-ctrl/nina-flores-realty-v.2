@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "neighborhoods": "Vecindarios",
+    "specialties": "Especialidades",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "searchHomes": "Buscar Casas",
+    "searchHomesTitle": "Abre la búsqueda de propiedades"
+  },
+  "hero": {
+    "headline": "Tu Camino al Hogar en Tucson Comienza Aquí",
+    "subheadline": "Compradores Primerizos · Propiedades de Lujo · Reubicación · Inversión · Nuevas Construcciones",
+    "ctaSearch": "Buscar Casas",
+    "ctaContact": "Contactar a Nina"
+  },
+  "about": {
+    "kicker": "Sobre Nina",
+    "title": "La REALTOR® de Confianza en Tucson",
+    "body": "Nina Flores es una REALTOR® bilingüe con Omni Homes International que ha ayudado a docenas de familias a comprar, vender e invertir en bienes raíces en Tucson. Nacida y criada en el sur de Arizona, aporta experiencia local y un trato personal en cada transacción.",
+    "learnMore": "Conoce Más Sobre Nina"
+  },
+  "specialties": {
+    "title": "Cómo Nina Puede Ayudarte",
+    "subtitle": "Ya sea que estés comprando tu primera casa o ampliando tu portafolio de inversiones, Nina tiene la experiencia para guiarte.",
+    "firstTimeBuyers": {
+      "title": "Compradores Primerizos",
+      "desc": "Comprar tu primera casa puede parecer abrumador. Nina te guía en cada paso, desde la precalificación hasta el cierre."
+    },
+    "luxury": {
+      "title": "Propiedades de Lujo",
+      "desc": "El mercado de lujo en Tucson exige discreción y conocimiento del mercado. Nina se especializa en propiedades de alto nivel en las mejores comunidades."
+    },
+    "relocation": {
+      "title": "Reubicación",
+      "desc": "¿Te mudas a Tucson desde otra ciudad? Nina ayuda a las familias a encontrar el vecindario, las escuelas y la casa perfecta para su estilo de vida."
+    },
+    "investment": {
+      "title": "Propiedades de Inversión",
+      "desc": "Desde viviendas unifamiliares hasta propiedades multifamiliares, Nina identifica oportunidades con fuerte potencial de rentabilidad en Tucson."
+    },
+    "newBuilds": {
+      "title": "Nuevas Construcciones",
+      "desc": "Trabaja con Nina para explorar comunidades de nueva construcción en Tucson, Marana, Vail y Sahuarita, con una experta de tu lado."
+    }
+  },
+  "listings": {
+    "title": "Propiedades Destacadas",
+    "subtitle": "Una selección de propiedades disponibles actualmente en el área de Tucson.",
+    "viewListing": "Ver Propiedad",
+    "beds": "rec",
+    "baths": "baños",
+    "sqft": "pies²",
+    "viewAll": "Ver Todas las Propiedades"
+  },
+  "neighborhoods": {
+    "title": "Vecindarios del Área de Tucson",
+    "subtitle": "Nina atiende a compradores y vendedores en todo el área metropolitana de Tucson. Explora las comunidades que mejor conoce.",
+    "searchIn": "Buscar Casas en",
+    "exploreAll": "Explorar Todos los Vecindarios"
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen los Clientes"
+  },
+  "calculator": {
+    "title": "Calculadora de Hipoteca",
+    "subtitle": "Estima tu pago mensual antes de comenzar tu búsqueda.",
+    "homePrice": "Precio de la Casa",
+    "downPayment": "Enganche",
+    "interestRate": "Tasa de Interés",
+    "loanTerm": "Plazo del Préstamo",
+    "years": "años",
+    "monthlyPayment": "Pago Mensual Est.",
+    "disclaimer": "Esto es solo una estimación. Consulta a un prestamista para cifras exactas.",
+    "prequalBtn": "¡Precalifícate Ahora!",
+    "prequalNote": "Nina trabaja con compradores que están precalificados o pagan en efectivo. Habla con un prestamista hoy."
+  },
+  "prequal": {
+    "title": "Precalificación",
+    "subtitle": "Llena tu información y un profesional hipotecario se pondrá en contacto contigo.",
+    "name": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "phone": "Número de Teléfono",
+    "loanAmount": "Precio Estimado de la Casa",
+    "notes": "Notas Adicionales",
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "success": "¡Gracias! Nos pondremos en contacto pronto.",
+    "error": "Algo salió mal. Por favor intenta de nuevo."
+  },
+  "lead": {
+    "title": "Hablemos",
+    "subtitle": "¿Listo para encontrar tu hogar? Envíale un mensaje a Nina y te responderá en menos de 24 horas.",
+    "name": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "phone": "Número de Teléfono",
+    "language": "Idioma Preferido",
+    "langEn": "Inglés",
+    "langEs": "Español",
+    "inquiryType": "¿Qué estás buscando?",
+    "buy": "Comprar una Casa",
+    "sell": "Vender mi Casa",
+    "invest": "Propiedad de Inversión",
+    "relocate": "Reubicarse a Tucson",
+    "browsing": "Solo Explorando",
+    "message": "Mensaje",
+    "submit": "Enviar Mensaje",
+    "submitting": "Enviando...",
+    "success": "¡Gracias! Nina se pondrá en contacto pronto.",
+    "error": "Algo salió mal. Por favor intenta de nuevo."
+  },
+  "cta": {
+    "title": "¿Listo para Encontrar tu Hogar?",
+    "subtitle": "Hablemos. Nina está lista para ayudarte a dar el siguiente paso.",
+    "btn": "Contactar a Nina Hoy"
+  },
+  "footer": {
+    "tagline": "Tu Camino al Hogar en Tucson Comienza Aquí",
+    "license": "Licencia",
+    "brokerage": "Omni Homes International",
+    "address": "7445 N Oracle Rd #201, Tucson, AZ 85704",
+    "equal": "Igualdad de Oportunidades de Vivienda",
+    "rights": "Todos los Derechos Reservados"
+  },
+  "blog": {
+    "title": "Perspectivas de Bienes Raíces",
+    "subtitle": "Actualizaciones del mercado, consejos de compra y destacados de vecindarios.",
+    "readMore": "Leer Más",
+    "categories": {
+      "market-updates": "Actualizaciones del Mercado",
+      "buying-tips": "Consejos para Comprar",
+      "selling-tips": "Consejos para Vender",
+      "neighborhood-spotlights": "Destacados de Vecindarios",
+      "relocation-guides": "Guías de Reubicación",
+      "first-time-home-buyers": "Compradores Primerizos",
+      "events": "Eventos"
+    }
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "Nina está aquí para responder tus preguntas y guiarte en el mercado inmobiliario de Tucson.",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "office": "Oficina",
+    "hours": "Horario de Atención",
+    "hoursValue": "Lunes–Viernes 9am–6pm · Sábado 10am–4pm · Domingo con cita"
+  }
+}

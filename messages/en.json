@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "neighborhoods": "Neighborhoods",
+    "specialties": "Specialties",
+    "blog": "Blog",
+    "contact": "Contact",
+    "searchHomes": "Search Homes",
+    "searchHomesTitle": "Opens property search"
+  },
+  "hero": {
+    "headline": "Your Tucson Home Journey Starts Here",
+    "subheadline": "First-Time Buyers · Luxury Properties · Relocation · Investment · New Builds",
+    "ctaSearch": "Search Homes",
+    "ctaContact": "Contact Nina"
+  },
+  "about": {
+    "kicker": "About Nina",
+    "title": "Tucson's Trusted REALTOR®",
+    "body": "Nina Flores is a bilingual REALTOR® with Omni Homes International who has helped dozens of families buy, sell, and invest in Tucson real estate. Born and raised in Southern Arizona, she brings local expertise and a personal touch to every transaction.",
+    "learnMore": "Learn More About Nina"
+  },
+  "specialties": {
+    "title": "How Nina Can Help You",
+    "subtitle": "Whether you're buying your first home or expanding your investment portfolio, Nina has the expertise to guide you.",
+    "firstTimeBuyers": {
+      "title": "First-Time Buyers",
+      "desc": "Navigating your first home purchase can feel overwhelming. Nina walks you through every step — from pre-qualification to closing day."
+    },
+    "luxury": {
+      "title": "Luxury Properties",
+      "desc": "Tucson's luxury market demands discretion and market knowledge. Nina specializes in high-end properties across the metro's finest communities."
+    },
+    "relocation": {
+      "title": "Relocation",
+      "desc": "Moving to Tucson from out of town? Nina helps relocating families find the right neighborhood, schools, and home to fit their lifestyle."
+    },
+    "investment": {
+      "title": "Investment Properties",
+      "desc": "From single-family rentals to multi-family opportunities, Nina identifies properties with strong ROI potential in the Tucson market."
+    },
+    "newBuilds": {
+      "title": "New Home Builds",
+      "desc": "Work with Nina to navigate new construction communities across Tucson, Marana, Vail, and Sahuarita — with an expert advocate on your side."
+    }
+  },
+  "listings": {
+    "title": "Featured Listings",
+    "subtitle": "A handpicked selection of properties currently available in the Tucson area.",
+    "viewListing": "View Listing",
+    "beds": "bd",
+    "baths": "ba",
+    "sqft": "sqft",
+    "viewAll": "View All Listings"
+  },
+  "neighborhoods": {
+    "title": "Tucson Area Neighborhoods",
+    "subtitle": "Nina serves buyers and sellers across the greater Tucson metro. Explore the communities she knows best.",
+    "searchIn": "Search Homes in",
+    "exploreAll": "Explore All Neighborhoods"
+  },
+  "testimonials": {
+    "title": "What Clients Are Saying"
+  },
+  "calculator": {
+    "title": "Mortgage Calculator",
+    "subtitle": "Estimate your monthly payment before you start your search.",
+    "homePrice": "Home Price",
+    "downPayment": "Down Payment",
+    "interestRate": "Interest Rate",
+    "loanTerm": "Loan Term",
+    "years": "years",
+    "monthlyPayment": "Est. Monthly Payment",
+    "disclaimer": "This is an estimate only. Contact a lender for accurate figures.",
+    "prequalBtn": "Get Prequalified Now!",
+    "prequalNote": "Nina works with buyers who are pre-qualified or paying cash. Talk to a lender today."
+  },
+  "prequal": {
+    "title": "Get Pre-Qualified",
+    "subtitle": "Fill out your information and a mortgage professional will reach out to discuss your options.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "loanAmount": "Estimated Home Price",
+    "notes": "Additional Notes",
+    "submit": "Submit",
+    "submitting": "Sending...",
+    "success": "Thank you! We'll be in touch shortly.",
+    "error": "Something went wrong. Please try again."
+  },
+  "lead": {
+    "title": "Let's Talk",
+    "subtitle": "Ready to find your home? Send Nina a message and she'll get back to you within 24 hours.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "language": "Preferred Language",
+    "langEn": "English",
+    "langEs": "Spanish",
+    "inquiryType": "What are you looking for?",
+    "buy": "Buy a Home",
+    "sell": "Sell My Home",
+    "invest": "Investment Property",
+    "relocate": "Relocating to Tucson",
+    "browsing": "Just Browsing",
+    "message": "Message",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "success": "Thank you! Nina will be in touch soon.",
+    "error": "Something went wrong. Please try again."
+  },
+  "cta": {
+    "title": "Ready to Find Your Home?",
+    "subtitle": "Let's talk. Nina is ready to help you take the next step.",
+    "btn": "Contact Nina Today"
+  },
+  "footer": {
+    "tagline": "Your Tucson Home Journey Starts Here",
+    "license": "License",
+    "brokerage": "Omni Homes International",
+    "address": "7445 N Oracle Rd #201, Tucson, AZ 85704",
+    "equal": "Equal Housing Opportunity",
+    "rights": "All Rights Reserved"
+  },
+  "blog": {
+    "title": "Real Estate Insights",
+    "subtitle": "Market updates, buying tips, and neighborhood spotlights from Nina's desk.",
+    "readMore": "Read More",
+    "categories": {
+      "market-updates": "Market Updates",
+      "buying-tips": "Buying Tips",
+      "selling-tips": "Selling Tips",
+      "neighborhood-spotlights": "Neighborhood Spotlights",
+      "relocation-guides": "Relocation Guides",
+      "first-time-home-buyers": "First Time Home Buyers",
+      "events": "Events"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Nina is here to answer your questions and guide you through the Tucson real estate market.",
+    "phone": "Phone",
+    "email": "Email",
+    "office": "Office",
+    "hours": "Office Hours",
+    "hoursValue": "Monday–Friday 9am–6pm · Saturday 10am–4pm · Sunday by appointment"
+  }
+}
