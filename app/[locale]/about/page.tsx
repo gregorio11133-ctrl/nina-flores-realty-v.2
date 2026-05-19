@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
-import { Phone, Mail, Globe } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -20,14 +20,14 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
   const bio = isEs ? [
     'Nina Flores nació y creció en el sur de Arizona. Desde pequeña, aprendió a valorar las comunidades que hacen única a esta región: los vecindarios llenos de historia, las familias que llevan generaciones aquí y los recién llegados que están construyendo sus sueños en el desierto.',
-    'Convertirse en REALTOR® no fue una decisión de negocios. Fue una vocación. Nina vio cómo muchas familias de habla hispana enfrentaban barreras — idioma, terminología legal, procesos desconocidos — y decidió ser el puente que necesitaban.',
+    'Después de perder su hogar de la infancia durante la recesión de 2008, Nina, sus tres hermanos y su madre soltera se mudaron de un apartamento rentado a otro. Se las arreglaron, pero con los precios de renta en aumento, vecinos cuestionables y siempre a la merced de un arrendador poco dispuesto a reparar los problemas de la propiedad, echar raíces era todo un desafío. Cuando Nina y su esposo compraron su primera casa a los 24 años, ella finalmente encontró un sentido de estabilidad y paz que cambió el rumbo de su vida. Es este sentido de estabilidad y paz lo que la inspiró a entrar en el mundo de los bienes raíces, para ayudar a otros a alcanzarlo.',
     'Hoy, Nina trabaja con compradores primerizos, familias que se reubican, inversionistas y quienes buscan propiedades de lujo. Su enfoque es simple: conocer las necesidades de cada cliente y encontrar no solo una casa, sino el hogar correcto.',
-    'Cuando no está mostrando propiedades, Nina pasa tiempo con su familia, explora los restaurantes de Tucson y se mantiene activa en su comunidad.',
+    'Cuando no está mostrando propiedades, le gusta pasar tiempo con su familia y sus dos perros, Frank y Beans. Además de ayudar a otros en bienes raíces, administra una tienda de segunda mano en línea llamada Coyote Flower y es productora del podcast El Tucsonan.',
   ] : [
     'Nina Flores was born and raised in Southern Arizona. Growing up, she developed a deep appreciation for the communities that make this region unique — historic neighborhoods, multigenerational families, and newcomers building their dreams in the desert.',
-    'Becoming a REALTOR® was not a business decision. It was a calling. Nina saw how many Spanish-speaking families faced barriers — language, legal terminology, unfamiliar processes — and decided to become the bridge they needed.',
+    'After losing her childhood home during the 2008 recession, Nina, her three siblings, and her single mother moved from one rented apartment to another. They got by, but with rising rent prices, questionable neighbors, and always being at the mercy of a landlord unwilling to fix property issues, setting down roots was a challenge. So when Nina and her husband purchased their first home at 24 years old, she finally had a sense of stability and peace that changed the trajectory of her life. It is this sense of stability and peace that inspired her to get into real estate — to help others achieve it for themselves.',
     'Today, Nina works with first-time buyers, relocating families, investors, and luxury property seekers. Her approach is simple: understand each client\'s needs and find not just a house, but the right home.',
-    'When she\'s not showing homes, Nina spends time with her family, explores Tucson\'s restaurant scene, and stays active in her community.',
+    'When she\'s not showing homes, she likes to spend time with her family and two dogs, Frank and Beans. In addition to helping others in real estate, she runs an online thrift store called Coyote Flower and is a producer for El Tucsonan Podcast!',
   ];
 
   return (
@@ -43,9 +43,18 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       </div>
 
       {/* Bio section */}
-      <section className="py-16 px-4" style={{ background: 'var(--color-cream)' }}>
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-start">
-          <div className="shrink-0 flex flex-col items-center gap-4">
+      <section className="relative py-16 px-4" style={{ background: 'var(--color-cream)' }}>
+
+        {/* Agave — desktop only, behind entire section, left edge */}
+        <div className="absolute left-0 bottom-0 h-full pointer-events-none hidden md:block" style={{ zIndex: 0 }} aria-hidden="true">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/agave.png" alt="" style={{ height: 'calc(100% + 32px)', width: 'auto', opacity: 0.18 }} />
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-start">
+
+          {/* Left sidebar — sticky on desktop */}
+          <div className="shrink-0 flex flex-col items-center gap-4 md:sticky md:top-24">
             <div className="w-56 h-56 rounded-full overflow-hidden shadow-xl" style={{ border: '4px solid var(--color-maroon)' }}>
               <Image src="/nina-flores.jpg" alt="Nina Flores, REALTOR®" width={224} height={224} className="object-cover w-full h-full" />
             </div>
@@ -63,21 +72,24 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 <Mail size={14} style={{ color: 'var(--color-maroon)' }} />
                 <a href="mailto:NinaFloresRealty@gmail.com" className="hover:underline break-all">NinaFloresRealty@gmail.com</a>
               </div>
-              <div className="flex items-center gap-2">
-                <Globe size={14} style={{ color: 'var(--color-maroon)' }} />
-                <span>English · Español</span>
-              </div>
             </div>
           </div>
 
-          <div className="flex-1 space-y-4">
+          {/* Bio content + License Info */}
+          <div className="relative flex-1 space-y-4">
             {bio.map((p, i) => (
-              <p key={i} className="text-base leading-relaxed opacity-80" style={{ fontFamily: 'var(--font-body)' }}>{p}</p>
+              <p key={i} className="relative text-base leading-relaxed opacity-80" style={{ fontFamily: 'var(--font-body)', zIndex: 30 }}>{p}</p>
             ))}
 
-            <div className="mt-8 rounded-sm p-6" style={{ background: 'var(--color-cream-dark)', borderLeft: '4px solid var(--color-maroon)' }}>
+            {/* Agave — mobile only, overlays License Info tile, no layout space */}
+            <div className="absolute bottom-0 right-0 pointer-events-none md:hidden" style={{ zIndex: 20 }} aria-hidden="true">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/agave.png" alt="" style={{ height: '520px', width: 'auto', opacity: 0.18 }} />
+            </div>
+
+            <div className="relative mt-8 rounded-sm p-6" style={{ background: 'var(--color-cream-dark)', borderLeft: '4px solid var(--color-maroon)', zIndex: 10 }}>
               <p className="font-bold mb-1" style={{ fontFamily: 'var(--font-display)', color: 'var(--color-maroon)' }}>
-                {isEs ? 'Credenciales' : 'Credentials'}
+                {isEs ? 'Información de Licencia' : 'License Information'}
               </p>
               <ul className="text-sm space-y-1 opacity-80" style={{ fontFamily: 'var(--font-body)' }}>
                 <li>REALTOR® — National Association of REALTORS®</li>

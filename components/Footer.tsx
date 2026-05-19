@@ -1,7 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import Logo from './Logo';
-import { Phone, Mail, MapPin, Link as LinkIcon } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 interface FooterProps {
   locale: string;
@@ -25,7 +25,15 @@ export default function Footer({ locale }: FooterProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand */}
         <div className="md:col-span-1">
-          <Logo locale={locale} variant="light" />
+          <Link href={locale === 'en' ? '/' : '/es'} className="inline-block">
+            <Image
+              src="/nina-logo-footer.png"
+              alt="Nina Flores REALTOR® Southern Arizona"
+              width={180}
+              height={180}
+              style={{ objectFit: 'contain', width: '160px', height: 'auto' }}
+            />
+          </Link>
           <p className="mt-4 text-sm opacity-70" style={{ fontFamily: 'var(--font-body)' }}>
             {t('tagline')}
           </p>

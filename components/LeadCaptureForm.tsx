@@ -23,44 +23,68 @@ export default function LeadCaptureForm() {
   }
 
   const inputClass = "w-full px-4 py-2.5 border rounded-sm text-sm bg-white focus:outline-none focus:ring-2 transition-shadow";
-  const inputStyle = { borderColor: 'var(--color-cream-dark)', fontFamily: 'var(--font-body)', color: 'var(--color-charcoal)' };
+  const inputStyle: React.CSSProperties = { borderColor: 'var(--color-cream-dark)', fontFamily: 'var(--font-body)', color: 'var(--color-charcoal)' };
   const focusStyle = { '--tw-ring-color': 'var(--color-maroon)' } as React.CSSProperties;
+  const labelClass = "block text-sm font-semibold mb-1";
+  const labelStyle: React.CSSProperties = { fontFamily: 'var(--font-body)' };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-semibold mb-1" style={{ fontFamily: 'var(--font-body)' }}>{t('name')} *</label>
+          <label className={labelClass} style={labelStyle}>{t('name')} *</label>
           <input type="text" name="name" required className={inputClass} style={{ ...inputStyle, ...focusStyle }} />
         </div>
         <div>
-          <label className="block text-sm font-semibold mb-1" style={{ fontFamily: 'var(--font-body)' }}>{t('email')} *</label>
+          <label className={labelClass} style={labelStyle}>{t('email')} *</label>
           <input type="email" name="email" required className={inputClass} style={{ ...inputStyle, ...focusStyle }} />
         </div>
         <div>
-          <label className="block text-sm font-semibold mb-1" style={{ fontFamily: 'var(--font-body)' }}>{t('phone')}</label>
+          <label className={labelClass} style={labelStyle}>{t('phone')}</label>
           <input type="tel" name="phone" className={inputClass} style={{ ...inputStyle, ...focusStyle }} />
         </div>
         <div>
-          <label className="block text-sm font-semibold mb-1" style={{ fontFamily: 'var(--font-body)' }}>{t('language')}</label>
+          <label className={labelClass} style={labelStyle}>{t('language')}</label>
           <select name="preferred_language" className={inputClass} style={{ ...inputStyle, ...focusStyle }}>
             <option value="en">{t('langEn')}</option>
             <option value="es">{t('langEs')}</option>
           </select>
         </div>
       </div>
+
+      {/* What are you looking for */}
       <div>
-        <label className="block text-sm font-semibold mb-1" style={{ fontFamily: 'var(--font-body)' }}>{t('inquiryType')}</label>
+        <label className={labelClass} style={labelStyle}>{t('inquiryType')}</label>
         <select name="inquiry_type" className={inputClass} style={{ ...inputStyle, ...focusStyle }}>
           <option value="buy">{t('buy')}</option>
           <option value="sell">{t('sell')}</option>
-          <option value="invest">{t('invest')}</option>
-          <option value="relocate">{t('relocate')}</option>
-          <option value="browsing">{t('browsing')}</option>
+          <option value="both">{t('both')}</option>
         </select>
       </div>
+
+      {/* Relocating from out of state */}
       <div>
-        <label className="block text-sm font-semibold mb-1" style={{ fontFamily: 'var(--font-body)' }}>{t('message')}</label>
+        <label className={labelClass} style={labelStyle}>{t('relocatingOutOfState')}</label>
+        <select name="relocating_out_of_state" className={inputClass} style={{ ...inputStyle, ...focusStyle }}>
+          <option value="">{t('selectOne')}</option>
+          <option value="yes">{t('yes')}</option>
+          <option value="no">{t('no')}</option>
+        </select>
+      </div>
+
+      {/* Pre-qualified */}
+      <div>
+        <label className={labelClass} style={labelStyle}>{t('prequalified')}</label>
+        <select name="prequalified" className={inputClass} style={{ ...inputStyle, ...focusStyle }}>
+          <option value="">{t('selectOne')}</option>
+          <option value="yes">{t('yes')}</option>
+          <option value="no">{t('no')}</option>
+          <option value="cash">{t('cashOther')}</option>
+        </select>
+      </div>
+
+      <div>
+        <label className={labelClass} style={labelStyle}>{t('message')}</label>
         <textarea name="message" rows={4} className={inputClass} style={{ ...inputStyle, ...focusStyle, resize: 'vertical' }} />
       </div>
 

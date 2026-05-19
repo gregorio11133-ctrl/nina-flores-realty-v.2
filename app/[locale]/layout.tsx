@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import '@/app/globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import OmniBanner from '@/components/OmniBanner';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ninafloresrealty.com'),
@@ -45,6 +46,7 @@ export default async function LocaleLayout({
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
+          <OmniBanner />
           <Navbar locale={locale} />
           <main>{children}</main>
           <Footer locale={locale} />
