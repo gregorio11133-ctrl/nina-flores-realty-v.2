@@ -19,9 +19,10 @@ export default function Navbar({ locale }: NavbarProps) {
   const [mobileExpanded, setMobileExpanded] = useState<DropdownKey>(null);
   const base = locale === 'en' ? '' : '/es';
 
-  const dropdowns: Record<string, { label: string; items: { href: string; label: string }[] }> = {
+  const dropdowns: Record<string, { label: string; href?: string; items: { href: string; label: string }[] }> = {
     firstTimeBuyers: {
       label: 'First Time Home Buyers',
+      href: `${base}/first-time-buyers`,
       items: [
         { href: `${base}/first-time-buyers`, label: 'Overview' },
         { href: `${base}/first-time-buyers#process`, label: 'The Buying Process' },
@@ -95,13 +96,16 @@ export default function Navbar({ locale }: NavbarProps) {
                 onMouseEnter={() => setActiveDropdown(key as DropdownKey)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button
-                  className="flex items-center gap-1 text-sm hover:text-maroon transition-colors"
-                  style={linkStyle}
-                >
-                  {data.label}
-                  <ChevronDown size={13} className={`transition-transform ${activeDropdown === key ? 'rotate-180' : ''}`} />
-                </button>
+                <div className="flex items-center gap-0.5">
+                  {data.href ? (
+                    <Link href={data.href} className="text-sm hover:text-maroon transition-colors" style={linkStyle}>
+                      {data.label}
+                    </Link>
+                  ) : (
+                    <span className="text-sm" style={linkStyle}>{data.label}</span>
+                  )}
+                  <ChevronDown size={13} className={`transition-transform ml-0.5 ${activeDropdown === key ? 'rotate-180' : ''}`} style={{ color: 'var(--color-charcoal)' }} />
+                </div>
                 {activeDropdown === key && (
                   <div
                     className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-sm border py-1.5 z-50"
@@ -167,17 +171,26 @@ export default function Navbar({ locale }: NavbarProps) {
 
           {(Object.entries(dropdowns) as [string, typeof dropdowns[string]][]).map(([key, data]) => (
             <div key={key}>
-              <button
-                onClick={() => setMobileExpanded(mobileExpanded === key ? null : key as DropdownKey)}
-                className="flex items-center justify-between w-full text-base py-1"
-                style={linkStyle}
-              >
-                {data.label}
-                <ChevronDown
-                  size={16}
-                  className={`transition-transform ${mobileExpanded === key ? 'rotate-180' : ''}`}
-                />
-              </button>
+              <div className="flex items-center justify-between w-full py-1">
+                {data.href ? (
+                  <Link href={data.href} onClick={() => setOpen(false)} className="text-base hover:text-maroon" style={linkStyle}>
+                    {data.label}
+                  </Link>
+                ) : (
+                  <span className="text-base" style={linkStyle}>{data.label}</span>
+                )}
+                <button
+                  onClick={() => setMobileExpanded(mobileExpanded === key ? null : key as DropdownKey)}
+                  className="p-1"
+                  aria-label={`Toggle ${data.label} submenu`}
+                >
+                  <ChevronDown
+                    size={16}
+                    className={`transition-transform ${mobileExpanded === key ? 'rotate-180' : ''}`}
+                    style={{ color: 'var(--color-charcoal)' }}
+                  />
+                </button>
+              </div>
               {mobileExpanded === key && (
                 <div className="pl-4 mt-1 flex flex-col gap-2 border-l-2" style={{ borderColor: 'var(--color-maroon)' }}>
                   {data.items.map(item => (
