@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import FloatingChat from '@/components/FloatingChat';
 import CincLink from '@/components/CincLink';
+import MovingAnimation from '@/components/MovingAnimation';
 
 export const metadata: Metadata = {
   title: 'First Time Home Buyers | Nina Flores Realty',
@@ -68,10 +69,10 @@ export default async function FirstTimeBuyersPage({ params }: { params: Promise<
     <>
       {/* Hero */}
       <section
-        className="py-20 px-4 text-center"
-        style={{ background: 'var(--color-maroon)', minHeight: '40vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        className="pt-20 pb-0 px-4 text-center overflow-hidden"
+        style={{ background: 'var(--color-maroon)', minHeight: '40vh' }}
       >
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto pb-8">
           <p
             className="text-xs uppercase tracking-widest mb-4 opacity-70"
             style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-body)' }}
@@ -85,28 +86,14 @@ export default async function FirstTimeBuyersPage({ params }: { params: Promise<
             Buying a home for the first time can be confusing.
           </h1>
           <p
-            className="text-lg mb-8 leading-relaxed opacity-85"
+            className="text-lg leading-relaxed opacity-85"
             style={{ fontFamily: 'var(--font-body)', color: 'var(--color-cream)' }}
           >
             That&apos;s completely normal — and it&apos;s exactly why Nina is here. She&apos;s guided dozens of first-time buyers through the process from start to keys-in-hand, making sure you understand every step and never feel alone.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href={`${base}/first-time-buyers/process`}
-              className="px-8 py-3.5 rounded-sm font-bold text-base transition-opacity hover:opacity-90"
-              style={{ background: 'var(--color-gold)', color: 'var(--color-charcoal)', fontFamily: 'var(--font-body)' }}
-            >
-              See the Process
-            </Link>
-            <Link
-              href={`${base}/contact`}
-              className="px-8 py-3.5 rounded-sm font-bold text-base border-2 text-white transition-colors hover:bg-white/10"
-              style={{ borderColor: 'rgba(255,255,255,0.5)', fontFamily: 'var(--font-body)' }}
-            >
-              Talk to Nina
-            </Link>
-          </div>
         </div>
+        {/* Moving animation — people carry boxes into a house */}
+        <MovingAnimation />
       </section>
 
       {/* Reassurance strip */}
