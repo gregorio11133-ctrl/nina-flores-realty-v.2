@@ -1,118 +1,176 @@
 'use client';
 
-const CREAM  = 'rgba(245,239,230,0.93)';
-const GOLD   = '#C9A84C';
-const MAROON = '#6B1A2A';
-const DARK   = 'rgba(60,10,15,0.45)';
+const C  = 'rgba(245,239,230,0.93)';
+const G  = '#C9A84C';
+const M  = '#6B1A2A';
+const DK = 'rgba(50,10,15,0.45)';
 
-/* Ground baseline: y=185 inside viewBox "0 0 1200 210" */
-const GY = 185;
+const GY = 183; // ground y inside viewBox "0 0 1200 200"
 
-function Person() {
+/* ─── Adult carrying a box (facing right) ─── */
+function Adult({ cx, cy }: { cx: number; cy: number }) {
   return (
-    <g>
+    <g transform={`translate(${cx},${cy})`}>
       {/* Head */}
-      <circle cx="0" cy="-63" r="11" fill={CREAM} />
-      {/* Box at chest */}
-      <rect x="-18" y="-52" width="36" height="24" rx="3" fill={GOLD} />
-      <line x1="-18" y1="-52" x2="18" y2="-28" stroke={DARK} strokeWidth="1.3" />
-      <line x1="18"  y1="-52" x2="-18" y2="-28" stroke={DARK} strokeWidth="1.3" />
-      {/* Arms at sides of box */}
-      <rect x="-22" y="-42" width="6" height="10" rx="3" fill={CREAM} />
-      <rect x="16"  y="-42" width="6" height="10" rx="3" fill={CREAM} />
-      {/* Torso */}
-      <rect x="-7" y="-28" width="14" height="18" rx="4" fill={CREAM} />
-      {/* Left leg — rotates from hip */}
-      <g className="leg-l">
-        <rect x="-10" y="-10" width="8" height="17" rx="4" fill={CREAM} />
+      <circle cx="0" cy="-70" r="12" fill={C} />
+      {/* Body */}
+      <rect x="-8" y="-57" width="16" height="27" rx="5" fill={C} />
+      {/* Arms + box held out to the right */}
+      <rect x="6"  y="-51" width="24" height="7" rx="3" fill={C} />
+      <rect x="26" y="-57" width="30" height="23" rx="3" fill={G} />
+      <line x1="26" y1="-57" x2="56" y2="-34" stroke={DK} strokeWidth="1.3" />
+      <line x1="56" y1="-57" x2="26" y2="-34" stroke={DK} strokeWidth="1.3" />
+      <rect x="26" y="-35" width="24" height="7" rx="3" fill={C} />
+      {/* Left leg (swings forward) */}
+      <g transform="translate(-5,-30)">
+        <animateTransform attributeName="transform" additive="sum"
+          type="rotate" values="24 4 0;-24 4 0;24 4 0" dur="0.47s" repeatCount="indefinite" />
+        <rect x="-4" y="0" width="8" height="23" rx="4" fill={C} />
       </g>
-      {/* Right leg */}
-      <g className="leg-r">
-        <rect x="2" y="-10" width="8" height="17" rx="4" fill={CREAM} />
+      {/* Right leg (opposite phase) */}
+      <g transform="translate(3,-30)">
+        <animateTransform attributeName="transform" additive="sum"
+          type="rotate" values="-24 4 0;24 4 0;-24 4 0" dur="0.47s" repeatCount="indefinite" />
+        <rect x="-4" y="0" width="8" height="23" rx="4" fill={C} />
       </g>
     </g>
   );
 }
 
-/* House — centered at x=0, ground at y=0 (caller translates) */
-function House() {
+/* ─── Child (smaller, following) ─── */
+function Child({ cx, cy }: { cx: number; cy: number }) {
   return (
-    <g>
+    <g transform={`translate(${cx},${cy})`}>
+      {/* Head */}
+      <circle cx="0" cy="-50" r="9" fill={C} />
+      {/* Body */}
+      <rect x="-6" y="-41" width="12" height="21" rx="4" fill={C} />
+      {/* Arms */}
+      <rect x="-10" y="-38" width="6" height="14" rx="3" fill={C} transform="rotate(20 -7 -31)" />
+      <rect x="4"  y="-38" width="6" height="14" rx="3" fill={C} transform="rotate(-15 7 -31)" />
+      {/* Left leg */}
+      <g transform="translate(-4,-20)">
+        <animateTransform attributeName="transform" additive="sum"
+          type="rotate" values="22 3 0;-22 3 0;22 3 0" dur="0.38s" begin="0.09s" repeatCount="indefinite" />
+        <rect x="-3" y="0" width="6" height="18" rx="3" fill={C} />
+      </g>
+      {/* Right leg */}
+      <g transform="translate(2,-20)">
+        <animateTransform attributeName="transform" additive="sum"
+          type="rotate" values="-22 3 0;22 3 0;-22 3 0" dur="0.38s" begin="0.09s" repeatCount="indefinite" />
+        <rect x="-3" y="0" width="6" height="18" rx="3" fill={C} />
+      </g>
+    </g>
+  );
+}
+
+/* ─── Dog (trotting, tail wagging) ─── */
+function Dog({ cx, cy }: { cx: number; cy: number }) {
+  return (
+    <g transform={`translate(${cx},${cy})`}>
+      {/* Body */}
+      <ellipse cx="0" cy="-15" rx="22" ry="10" fill={C} />
+      {/* Head */}
+      <circle cx="19" cy="-26" r="10" fill={C} />
+      {/* Floppy ear */}
+      <ellipse cx="15" cy="-19" rx="5" ry="8" fill="rgba(195,175,155,0.65)"
+        transform="rotate(-18 15 -19)" />
+      {/* Snout */}
+      <rect x="25" y="-24" width="9" height="6" rx="3" fill="rgba(210,185,165,0.65)" />
+      {/* Nose */}
+      <circle cx="33" cy="-22" r="2.2" fill={DK} />
+      {/* Eye */}
+      <circle cx="21" cy="-29" r="2"   fill={DK} />
+      {/* Tail (wagging) */}
+      <g transform="translate(-21,-18)">
+        <animateTransform attributeName="transform" additive="sum"
+          type="rotate" values="18 0 0;-18 0 0;18 0 0" dur="0.28s" repeatCount="indefinite" />
+        <path d="M0,0 Q-10,-12 -6,-22" stroke={C} strokeWidth="5"
+          strokeLinecap="round" fill="none" />
+      </g>
+      {/* Front legs */}
+      <g transform="translate(10,-5)">
+        <animateTransform attributeName="transform" additive="sum"
+          type="rotate" values="20 2 0;-20 2 0;20 2 0" dur="0.32s" repeatCount="indefinite" />
+        <rect x="-2" y="0" width="5" height="11" rx="2" fill={C} />
+      </g>
+      <g transform="translate(6,-5)">
+        <animateTransform attributeName="transform" additive="sum"
+          type="rotate" values="-20 2 0;20 2 0;-20 2 0" dur="0.32s" repeatCount="indefinite" />
+        <rect x="-2" y="0" width="5" height="11" rx="2" fill={C} />
+      </g>
+      {/* Back legs */}
+      <g transform="translate(-10,-5)">
+        <animateTransform attributeName="transform" additive="sum"
+          type="rotate" values="-20 2 0;20 2 0;-20 2 0" dur="0.32s" repeatCount="indefinite" />
+        <rect x="-2" y="0" width="5" height="11" rx="2" fill={C} />
+      </g>
+      <g transform="translate(-14,-5)">
+        <animateTransform attributeName="transform" additive="sum"
+          type="rotate" values="20 2 0;-20 2 0;20 2 0" dur="0.32s" repeatCount="indefinite" />
+        <rect x="-2" y="0" width="5" height="11" rx="2" fill={C} />
+      </g>
+    </g>
+  );
+}
+
+/* ─── House ─── */
+function House({ cx, cy }: { cx: number; cy: number }) {
+  return (
+    <g transform={`translate(${cx},${cy})`}>
       {/* Chimney */}
-      <rect x="36" y="-122" width="16" height="36" rx="2" fill={GOLD} opacity="0.85" />
-      {/* Smoke */}
-      <circle cx="44" cy="-130" r="6"  fill="rgba(245,239,230,0.22)" />
-      <circle cx="50" cy="-138" r="4"  fill="rgba(245,239,230,0.15)" />
+      <rect x="36" y="-124" width="16" height="38" rx="2" fill={G} opacity="0.85" />
+      <circle cx="44" cy="-132" r="6" fill="rgba(245,239,230,0.22)" />
+      <circle cx="50" cy="-141" r="4" fill="rgba(245,239,230,0.15)" />
       {/* Roof */}
-      <polygon points="-80,-86  0,-122  80,-86" fill={GOLD} opacity="0.92" />
-      {/* Left wall */}
-      <rect x="-80" y="-86" width="57" height="86" fill={CREAM} opacity="0.95" />
-      {/* Right wall */}
-      <rect x="23"  y="-86" width="57" height="86" fill={CREAM} opacity="0.95" />
-      {/* Header above door */}
-      <rect x="-23" y="-86" width="46" height="20" fill={CREAM} opacity="0.95" />
+      <polygon points="-82,-88  0,-126  82,-88" fill={G} opacity="0.92" />
+      {/* Walls (split around door so people walk through gap) */}
+      <rect x="-82" y="-88" width="59" height="88" fill={C} opacity="0.95" />
+      <rect x="23"  y="-88" width="59" height="88" fill={C} opacity="0.95" />
+      <rect x="-23" y="-88" width="46" height="22" fill={C} opacity="0.95" />
       {/* Door */}
-      <rect x="-23" y="-66" width="46" height="66" rx="3" fill={MAROON} opacity="0.82" />
-      {/* Door arch */}
-      <path d="M-23,-66 Q0,-82 23,-66" fill={MAROON} opacity="0.82" />
-      {/* Door knob */}
-      <circle cx="12" cy="-33" r="3.5" fill={GOLD} />
-      {/* Left window */}
-      <rect x="-67" y="-68" width="22" height="16" rx="2" fill={GOLD} opacity="0.3" />
-      <line x1="-56" y1="-68" x2="-56" y2="-52" stroke={GOLD} strokeWidth="1" opacity="0.5" />
-      <line x1="-67" y1="-60" x2="-45" y2="-60" stroke={GOLD} strokeWidth="1" opacity="0.5" />
-      {/* Right window */}
-      <rect x="45" y="-68" width="22" height="16" rx="2" fill={GOLD} opacity="0.3" />
-      <line x1="56" y1="-68" x2="56" y2="-52" stroke={GOLD} strokeWidth="1" opacity="0.5" />
-      <line x1="45" y1="-60" x2="67" y2="-60" stroke={GOLD} strokeWidth="1" opacity="0.5" />
+      <rect x="-23" y="-66" width="46" height="66" rx="3" fill={M} opacity="0.82" />
+      <path d="M-23,-66 Q0,-83 23,-66" fill={M} opacity="0.82" />
+      <circle cx="13" cy="-33" r="3.5" fill={G} />
+      {/* Windows */}
+      <rect x="-69" y="-69" width="22" height="16" rx="2" fill={G} opacity="0.30" />
+      <line x1="-58" y1="-69" x2="-58" y2="-53" stroke={G} strokeWidth="1" opacity="0.5" />
+      <line x1="-69" y1="-61" x2="-47" y2="-61" stroke={G} strokeWidth="1" opacity="0.5" />
+      <rect x="47"  y="-69" width="22" height="16" rx="2" fill={G} opacity="0.30" />
+      <line x1="58" y1="-69" x2="58" y2="-53" stroke={G} strokeWidth="1" opacity="0.5" />
+      <line x1="47" y1="-61" x2="69" y2="-61" stroke={G} strokeWidth="1" opacity="0.5" />
       {/* Step */}
-      <rect x="-30" y="-3" width="60" height="6" rx="2" fill={GOLD} opacity="0.55" />
+      <rect x="-30" y="-3" width="60" height="6" rx="2" fill={G} opacity="0.55" />
     </g>
   );
 }
 
 export default function MovingAnimation() {
   return (
-    <>
-      <style>{`
-        @keyframes march {
-          from { transform: translateX(-220px); }
-          to   { transform: translateX(1260px); }
-        }
-        @keyframes legL {
-          0%,100% { transform-box:fill-box; transform-origin:50% 0%; transform:rotate(26deg); }
-          50%      { transform-box:fill-box; transform-origin:50% 0%; transform:rotate(-26deg); }
-        }
-        @keyframes legR {
-          0%,100% { transform-box:fill-box; transform-origin:50% 0%; transform:rotate(-26deg); }
-          50%      { transform-box:fill-box; transform-origin:50% 0%; transform:rotate(26deg); }
-        }
-        .person-a { animation: march 9s  0s  linear infinite; }
-        .person-b { animation: march 9s -3s  linear infinite; }
-        .person-c { animation: march 9s -6s  linear infinite; }
-        .leg-l    { animation: legL 0.46s ease-in-out infinite; }
-        .leg-r    { animation: legR 0.46s ease-in-out infinite; }
-      `}</style>
+    <div className="w-full">
+      <svg viewBox="0 0 1200 200" width="100%" style={{ display: 'block' }} aria-hidden="true">
+        {/* Ground */}
+        <line x1="0" y1={GY} x2="1200" y2={GY}
+          stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
 
-      <div className="w-full">
-        <svg
-          viewBox={`0 0 1200 210`}
-          width="100%"
-          style={{ display: 'block' }}
-          aria-hidden="true"
-        >
-          {/* Ground */}
-          <line x1="0" y1={GY} x2="1200" y2={GY} stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
+        {/* Family — SVG-native SMIL translate, fully reliable */}
+        <g>
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            from="-480 0"
+            to="1300 0"
+            dur="12s"
+            repeatCount="indefinite"
+          />
+          <Dog   cx={30}  cy={GY} />
+          <Child cx={130} cy={GY} />
+          <Adult cx={240} cy={GY} />
+        </g>
 
-          {/* People — drawn BEFORE house so house sits on top */}
-          <g className="person-a" transform={`translate(0,${GY})`}><Person /></g>
-          <g className="person-b" transform={`translate(0,${GY})`}><Person /></g>
-          <g className="person-c" transform={`translate(0,${GY})`}><Person /></g>
-
-          {/* House — drawn last, overlaps people so they appear to enter */}
-          <g transform={`translate(1090,${GY})`}><House /></g>
-        </svg>
-      </div>
-    </>
+        {/* House — drawn last so family walks into it */}
+        <House cx={1082} cy={GY} />
+      </svg>
+    </div>
   );
 }
