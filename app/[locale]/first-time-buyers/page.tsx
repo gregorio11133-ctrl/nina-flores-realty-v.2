@@ -271,6 +271,16 @@ export default async function FirstTimeBuyersPage({ params }: { params: Promise<
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href={`${base}/first-time-buyers/tips`}
+              className="inline-block px-7 py-3 rounded-sm font-bold text-sm transition-opacity hover:opacity-90"
+              style={{ background: 'var(--color-maroon)', color: 'var(--color-cream)', fontFamily: 'var(--font-body)' }}
+            >
+              See More Tips →
+            </Link>
+          </div>
         </div>
       </section>
 
