@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -25,8 +25,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
       <section className="py-16 px-4" style={{ background: 'var(--color-cream)' }}>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Info panel */}
-          <div>
+          {/* Info panel — second on mobile, first on desktop */}
+          <div className="order-2 md:order-1">
             <h2 className="text-2xl font-bold mb-8" style={{ fontFamily: 'var(--font-display)', color: 'var(--color-maroon)' }}>
               Nina Flores
             </h2>
@@ -52,13 +52,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   <p style={{ color: 'var(--color-charcoal)' }}>Omni Homes International<br />7445 N Oracle Rd #201<br />Tucson, AZ 85704</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <Clock size={18} style={{ color: 'var(--color-maroon)' }} className="shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-bold uppercase tracking-wide text-xs opacity-50 mb-1">{t('hours')}</p>
-                  <p style={{ color: 'var(--color-charcoal)' }}>{t('hoursValue')}</p>
-                </div>
-              </div>
             </div>
 
             {/* Google Maps embed */}
@@ -76,8 +69,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </div>
           </div>
 
-          {/* Form */}
-          <div>
+          {/* Form — first on mobile, second on desktop */}
+          <div className="order-1 md:order-2">
             <h2 className="text-2xl font-bold mb-8" style={{ fontFamily: 'var(--font-display)', color: 'var(--color-maroon)' }}>
               {locale === 'es' ? 'Envía un Mensaje' : 'Send a Message'}
             </h2>
