@@ -107,20 +107,22 @@ export default function Navbar({ locale }: NavbarProps) {
                   <ChevronDown size={13} className={`transition-transform ml-0.5 ${activeDropdown === key ? 'rotate-180' : ''}`} style={{ color: 'var(--color-charcoal)' }} />
                 </div>
                 {activeDropdown === key && (
-                  <div
-                    className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-sm border py-1.5 z-50"
-                    style={{ borderColor: 'var(--color-cream-dark)' }}
-                  >
-                    {data.items.map(item => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block px-4 py-2 text-sm hover:text-maroon transition-colors"
-                        style={{ fontFamily: 'var(--font-body)', color: 'var(--color-charcoal)' }}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+                  <div className="absolute top-full left-0 pt-1 w-56 z-50">
+                    <div
+                      className="bg-white shadow-lg rounded-sm border py-1.5"
+                      style={{ borderColor: 'var(--color-cream-dark)' }}
+                    >
+                      {data.items.map(item => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="block px-4 py-2 text-sm hover:text-maroon transition-colors"
+                          style={{ fontFamily: 'var(--font-body)', color: 'var(--color-charcoal)' }}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
