@@ -230,8 +230,8 @@ export default async function RentTrapPage({ params }: { params: Promise<{ local
                 style={{ background: 'rgba(255,255,255,0.05)', borderLeft: '4px solid var(--color-gold)' }}
               >
                 <p
-                  className="font-bold text-base mb-3 italic"
-                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-gold)' }}
+                  className="text-xl mb-3"
+                  style={{ fontFamily: 'var(--font-script)', fontStyle: 'italic', fontWeight: 600, color: 'var(--color-gold)' }}
                 >
                   {struggle}
                 </p>
