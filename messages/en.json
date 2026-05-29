@@ -6,6 +6,8 @@
     "specialties": "Specialties",
     "blog": "Blog",
     "contact": "Contact",
+    "buying": "Buying",
+    "selling": "Selling",
     "searchHomes": "Search Homes",
     "searchHomesTitle": "Opens property search"
   },
@@ -106,6 +108,7 @@
     "buy": "Buy a Home",
     "sell": "Sell My Home",
     "both": "Buying & Selling",
+    "renterLost": "I'm a Renter and Don't Know Where to Start",
     "relocatingOutOfState": "Are you relocating from out of state?",
     "prequalified": "Are you pre-qualified?",
     "yes": "Yes",

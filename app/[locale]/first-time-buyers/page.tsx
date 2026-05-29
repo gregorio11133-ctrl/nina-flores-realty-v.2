@@ -119,11 +119,18 @@ export default async function FirstTimeBuyersPage({ params }: { params: Promise<
               Step by Step
             </p>
             <h2
-              className="text-3xl font-bold"
+              className="text-3xl font-bold mb-4"
               style={{ fontFamily: 'var(--font-display)', color: 'var(--color-maroon)' }}
             >
               The Home Buying Process
             </h2>
+            <Link
+              href={`${base}/first-time-buyers/process`}
+              className="inline-block px-6 py-2.5 rounded-sm font-bold text-sm transition-opacity hover:opacity-90"
+              style={{ background: 'var(--color-maroon)', color: 'var(--color-cream)', fontFamily: 'var(--font-body)' }}
+            >
+              See in More Detail →
+            </Link>
           </div>
 
           <div className="flex flex-col gap-6">
@@ -281,6 +288,37 @@ export default async function FirstTimeBuyersPage({ params }: { params: Promise<
               See More Tips →
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* New Builds CTA */}
+      <section className="py-16 px-4" style={{ background: 'var(--color-charcoal)' }}>
+        <div className="max-w-3xl mx-auto text-center">
+          <p
+            className="text-xs uppercase tracking-widest mb-3"
+            style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-body)' }}
+          >
+            New Construction
+          </p>
+          <h2
+            className="text-3xl font-bold text-white mb-4"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            Considering a Brand-New Home?
+          </h2>
+          <p
+            className="text-base leading-relaxed opacity-75 mb-8"
+            style={{ fontFamily: 'var(--font-body)', color: 'var(--color-cream)' }}
+          >
+            New construction communities are growing fast across Marana, Vail, Sahuarita, and Oro Valley. Nina can represent you as your buyer&apos;s agent at no extra cost — protecting your interests with the builder from day one.
+          </p>
+          <Link
+            href={`${base}/new-builds`}
+            className="inline-block px-8 py-3.5 rounded-sm font-bold text-base transition-opacity hover:opacity-90"
+            style={{ background: 'var(--color-gold)', color: 'var(--color-charcoal)', fontFamily: 'var(--font-body)' }}
+          >
+            Explore New Home Builds →
+          </Link>
         </div>
       </section>
 

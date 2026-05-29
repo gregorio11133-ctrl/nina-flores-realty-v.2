@@ -10,6 +10,7 @@ export const NEIGHBORHOODS: Neighborhood[] = [
     highlights: ['University District', 'Fourth Avenue', 'Barrio Viejo', 'Sam Hughes', 'Midtown'],
     highlightsEs: ['Distrito Universitario', 'Fourth Avenue', 'Barrio Viejo', 'Sam Hughes', 'Midtown'],
     cinc_url: 'https://ninaflores.viewalltucsonhomes.com/search/quick/PDQVLZZZW5WWR1PTY/homes-for-sale-in-tucson',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Rattlesnake_Bridge_-_Photographs_in_the_Carol_M._Highsmith_Archive%2C_Library_of_Congress%2C_Prints_and_Photographs_Division.jpg/800px-Rattlesnake_Bridge_-_Photographs_in_the_Carol_M._Highsmith_Archive%2C_Library_of_Congress%2C_Prints_and_Photographs_Division.jpg',
   },
   {
     slug: 'vail',

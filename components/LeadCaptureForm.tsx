@@ -59,6 +59,7 @@ export default function LeadCaptureForm() {
           <option value="buy">{t('buy')}</option>
           <option value="sell">{t('sell')}</option>
           <option value="both">{t('both')}</option>
+          <option value="renter">{t('renterLost')}</option>
         </select>
       </div>
 

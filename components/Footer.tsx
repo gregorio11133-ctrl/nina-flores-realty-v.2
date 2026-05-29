@@ -14,9 +14,9 @@ export default function Footer({ locale }: FooterProps) {
 
   const links = [
     { href: `${base}/about`, label: tn('about') },
+    { href: `${base}/buying`, label: tn('buying') },
+    { href: `${base}/selling`, label: tn('selling') },
     { href: `${base}/neighborhoods`, label: tn('neighborhoods') },
-    { href: `${base}/specialties`, label: tn('specialties') },
-    { href: `${base}/blog`, label: tn('blog') },
     { href: `${base}/contact`, label: tn('contact') },
   ];
 
@@ -41,7 +41,7 @@ export default function Footer({ locale }: FooterProps) {
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="opacity-60 hover:opacity-100 transition-opacity text-xs font-bold tracking-wide" style={{ fontFamily: 'var(--font-body)' }}>
               IG
             </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="opacity-60 hover:opacity-100 transition-opacity text-xs font-bold tracking-wide" style={{ fontFamily: 'var(--font-body)' }}>
+            <a href="https://www.facebook.com/profile.php?id=61575470225036" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="opacity-60 hover:opacity-100 transition-opacity text-xs font-bold tracking-wide" style={{ fontFamily: 'var(--font-body)' }}>
               FB
             </a>
           </div>
@@ -93,10 +93,7 @@ export default function Footer({ locale }: FooterProps) {
             <p>{t('license')}: SA712911000</p>
             <p>{t('brokerage')}</p>
             <p>{t('address')}</p>
-            <p className="mt-3 flex items-center gap-2">
-              <span className="text-lg" aria-label="REALTOR® logo">®</span>
-              REALTOR®
-            </p>
+            <p className="mt-3">REALTOR®</p>
             <p>{t('equal')}</p>
           </div>
         </div>

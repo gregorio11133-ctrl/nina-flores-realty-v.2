@@ -31,9 +31,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const specialties = [
     { icon: Users, key: 'firstTimeBuyers', href: `${base}/first-time-buyers` },
     { icon: Award, key: 'luxury', href: `${base}/contact` },
-    { icon: Home, key: 'relocation', href: `${base}/contact` },
-    { icon: TrendingUp, key: 'investment', href: `${base}/contact` },
-    { icon: Building2, key: 'newBuilds', href: `${base}/contact` },
+    { icon: Home, key: 'relocation', href: `${base}/neighborhoods` },
+    { icon: TrendingUp, key: 'investment', href: `${base}/investment` },
+    { icon: Building2, key: 'newBuilds', href: `${base}/new-builds` },
     { icon: DoorOpen, key: 'renters', href: `${base}/rent-trap` },
   ] as const;
 
@@ -172,6 +172,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 slug={n.slug}
                 name={locale === 'es' ? n.nameEs : n.name}
                 description={locale === 'es' ? n.descriptionEs : n.description}
+                image={n.image}
                 locale={locale}
               />
             ))}

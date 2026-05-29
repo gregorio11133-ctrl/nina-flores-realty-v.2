@@ -271,7 +271,7 @@ export default function HeroCarousel({ locale }: HeroCarouselProps) {
               >
                 {t('hero.subheadline')}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
                 <CincLink
                   href="https://ninaflores.viewalltucsonhomes.com/search"
                   className="px-8 py-3.5 rounded-sm font-bold text-base transition-opacity hover:opacity-90 text-center"
@@ -286,6 +286,13 @@ export default function HeroCarousel({ locale }: HeroCarouselProps) {
                 >
                   {t('hero.ctaContact')}
                 </a>
+                <Link
+                  href={`${base}/buying`}
+                  className="px-8 py-3.5 rounded-sm font-bold text-base text-white transition-colors hover:bg-white/10 text-center"
+                  style={{ border: '1px solid rgba(255,255,255,0.3)', fontFamily: 'var(--font-body)' }}
+                >
+                  {locale === 'es' ? 'Guía Gratuita para Comprar' : 'Get your FREE Homebuying Guide'}
+                </Link>
               </div>
             </div>
 
