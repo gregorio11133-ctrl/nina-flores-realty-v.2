@@ -27,6 +27,17 @@ export default async function NeighborhoodsPage({ params }: { params: Promise<{ 
       <div className="py-16 px-4 text-center" style={{ background: 'var(--color-maroon)' }}>
         <h1 className="text-4xl font-black text-white" style={{ fontFamily: 'var(--font-display)' }}>{t('title')}</h1>
         <p className="mt-3 opacity-80 max-w-2xl mx-auto" style={{ fontFamily: 'var(--font-body)', color: 'var(--color-cream)' }}>{t('subtitle')}</p>
+        <div className="mt-6">
+          <a
+            href="/RelocationGuide.pdf"
+            download
+            className="inline-flex items-center gap-2 px-7 py-3 rounded-sm font-bold text-sm transition-opacity hover:opacity-90"
+            style={{ background: 'var(--color-gold)', color: 'var(--color-charcoal)', fontFamily: 'var(--font-body)' }}
+          >
+            <BookOpen size={15} />
+            {isEs ? 'Guía Gratuita de Reubicación' : 'FREE Relocation Guide'}
+          </a>
+        </div>
       </div>
 
       {/* Neighborhood Grid */}
