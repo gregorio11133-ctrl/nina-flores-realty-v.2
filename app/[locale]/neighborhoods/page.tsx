@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
-import { MapPin, BookOpen, Phone } from 'lucide-react';
+import { MapPin, BookOpen } from 'lucide-react';
 import NeighborhoodCard from '@/components/NeighborhoodCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm';
 import { NEIGHBORHOODS } from '@/lib/neighborhoods';
@@ -54,7 +54,7 @@ export default async function NeighborhoodsPage({ params }: { params: Promise<{ 
                 {isEs ? 'Reubicación' : 'Relocation'}
               </p>
               <h2 className="text-3xl font-black mb-4" style={{ fontFamily: 'var(--font-display)', color: 'var(--color-charcoal)' }}>
-                {isEs ? 'Mudándote a Tucson?' : 'Moving to Tucson?'}
+                {isEs ? '¿Te mudas desde otro estado?' : 'Moving from out of State?'}
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ fontFamily: 'var(--font-body)', color: 'var(--color-charcoal)', opacity: 0.8 }}>
                 {isEs
@@ -63,8 +63,8 @@ export default async function NeighborhoodsPage({ params }: { params: Promise<{ 
               </p>
               <ul className="space-y-2 mb-6" style={{ fontFamily: 'var(--font-body)' }}>
                 {(isEs
-                  ? ['Orientación personalizada del vecindario', 'Información sobre distritos escolares y comodidades', 'Tours virtuales y en persona disponibles', 'Soporte de reubicación de empleador']
-                  : ['Personalized neighborhood orientation', 'School district & amenities guidance', 'Virtual and in-person tours available', 'Employer relocation support']
+                  ? ['Orientación personalizada del vecindario', 'Información sobre distritos escolares y comodidades', 'Tours virtuales y en persona disponibles']
+                  : ['Personalized neighborhood orientation', 'School district & amenities guidance', 'Virtual and in-person tours available']
                 ).map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm" style={{ color: 'var(--color-charcoal)', opacity: 0.85 }}>
                     <MapPin size={15} className="shrink-0 mt-0.5" style={{ color: 'var(--color-maroon)' }} />
@@ -82,12 +82,11 @@ export default async function NeighborhoodsPage({ params }: { params: Promise<{ 
                   {isEs ? 'Guía Gratuita de Reubicación' : 'Free Relocation Guide'}
                 </a>
                 <a
-                  href="tel:5203424124"
+                  href={`${base}/contact`}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-sm font-bold text-sm border transition-colors hover:bg-gray-50"
                   style={{ borderColor: 'var(--color-maroon)', color: 'var(--color-maroon)', fontFamily: 'var(--font-body)' }}
                 >
-                  <Phone size={15} />
-                  {isEs ? 'Llamar a Nina' : 'Call Nina'}
+                  {isEs ? 'Contactar a Nina' : 'Contact Nina'}
                 </a>
               </div>
             </div>
